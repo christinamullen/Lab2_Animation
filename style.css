@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Fahkwang:ital,wght@0,400;0,700;1,200&display=swap');
+
+:root {
+    --fc-Green: #2C4702;
+    --fc-Sand: #A69C80;
+    --bkg-Main: #f2f2f2;
+    --ff-Fahkwang: 'Fahkwang', sans-serif;
+}
+
+* body {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+header {
+    background-color: var(--bkg-Main);
+    font-family: var(--ff-Fahkwang);
+}
+header .banner {
+    display: flex;
+}
+
+
+.logo img {
+    width: 200px;
+    height: auto;
+}
+
+nav ul {
+    display: flex;
+    list-style-type: none;
+    flex-direction: inline;
+    justify-content: space-evenly;
+    gap: 24px;
+}
