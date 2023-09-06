@@ -2,28 +2,42 @@
 
 :root {
     --fc-Green: #2C4702;
+    --fc-hover: #284101;
     --fc-Sand: #A69C80;
     --bkg-Main: #f2f2f2;
     --ff-Fahkwang: 'Fahkwang', sans-serif;
 }
 
-* body {
+* {
     box-sizing: border-box;
     margin: 0;
+    
 }
+#container {
+    position: relative;
+    min-height: 100vh;
+}
+#content {
+    padding-bottom: 2.5rem;
+}
+
 
 header {
     background-color: var(--bkg-Main);
     font-family: var(--ff-Fahkwang);
 }
+
 header .banner {
     display: flex;
+    justify-content: center;
 }
 
-
 .logo img {
-    width: 200px;
-    height: auto;
+    width: 300px;
+    
+}
+nav {
+    padding: 1rem;
 }
 
 nav ul {
@@ -32,4 +46,88 @@ nav ul {
     flex-direction: inline;
     justify-content: space-evenly;
     gap: 24px;
+}
+
+.service_image img {
+    width: 100%;
+    height: auto;
+    padding: 0;
+    margin: 0;
+}
+
+.service_info {
+    padding: 1rem;
+    font-family: var(--ff-Fahkwang);
+
+}
+
+.service {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin: 2rem;
+    display: block;
+    
+}
+
+.service_text {
+    font-size: small;
+}
+
+button {
+    width: 200px;
+    border-radius: 4px;
+    background-color: var(--fc-Green);
+    color: var(--bkg-Main);
+    padding: 12px 30px;
+    font-size: medium;
+    margin: 32px;
+    border: none;
+    transform-origin: center;
+
+}
+button:hover {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    padding: 12px 24px;
+    transform: scale(0.95);
+    background-color: var(--fc-hover);
+    transition: transform 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.service_info button {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.dots {
+    display: flex;
+}
+
+
+footer {
+    width: 100%;
+    height: 5rem;
+    background-color: var(--bkg-Main);
+    padding: 2% 20%;
+    font-size: x-small;
+    font-family: var(--ff-Fahkwang);
+}
+
+@media (min-width: 700px) {
+ .service {
+    display: flex;
+    align-items: stretch;
+ }
+ .service_image {
+    flex: 1;
+    height: 100%;
+ }
+ .service_image img {
+    height: 100%;
+    width: auto;
+    object-fit: cover;
+    display: block;
+ }
+ .service_info {
+    flex: 2;
+ }
 }
