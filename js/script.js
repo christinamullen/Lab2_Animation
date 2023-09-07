@@ -1,21 +1,25 @@
 const button = document.getElementById('bookButton');
-const dots = button.querySelector('.dots');
+const pond = button.querySelector('.pond');
 const text = button.querySelector('.button_text');
 
 button.addEventListener('click', function() {
     //dots visible
-    dots.style.visibility = 'visible';
     text.style.visibility = 'hidden';
-    dots.style.right='40px';
-    Array.from(dots.children).forEach(dot =>{
-        dot.style.opacity = '1';
+
+    Array.from(pond.children).forEach(circle => {
+        circle.style.animation = 'none';  
+        circle.offsetHeight;
     });
-    //text.style.visibility = 'visible';
-    text.textContent = 'loading...';
+
+    pond.querySelector('.in').style.animation = 'showCircle 0.5s 1s forwards, hideCircle 0.5s 3s forwards';
+    pond.querySelector('.mid').style.animation = 'showCircle 0.5s 1.5s forwards, hideCircle 0.5s 2.5s forwards';
+    pond.querySelector('.out').style.animation = 'showCircle 0.5s 2s forwards, hideCircle 0.5s 2s forwards';
+
+    
 
     setTimeout(function() {
-        dots.style.right = '-100px'
-        dots.style.visibility = 'hidden';
-        text.textContent = 'Book Now';
+        text.style.visibility = 'visible';
+        text.textContent = 'Booking...';
+        //text.textContent = 'Book Now';
     }, 4000);
 });
