@@ -81,7 +81,7 @@ main {
 }
 
 .service_text {
-    font-size: x-small;
+    font-size: 11px;
     color: var(--fc-text);
 }
 
