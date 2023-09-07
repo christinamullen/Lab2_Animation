@@ -127,19 +127,16 @@ button:hover {
 .in {
     width: 20px;
     height: 20px;
-    animation: showCircle 0.5s 1s forwards, hideCircle 0.5s 3s forwards;
 }
 
 .mid {
     width: 30px;
     height: 30px;
-    animation: showCircle 0.5s 1.5s forwards, hideCircle 0.5s 2.5s forwards;
 }
 
 .mid {
     width: 40px;
     height: 40px;
-    animation: showCircle 0.5s 2s forwards, hideCircle 0.5s 2s forwards;
 }
 
 footer {
